@@ -4,12 +4,17 @@ class antiDiag
 {
 	public static void compute(int [][]a, int n)
 	{
-		for(int i=0; i<n; i++)
+		int k=0, i=0;
+		while(i<=n)
 		{
-			for(int j=i; j<n; j++)
+			for(int j=0; j<n; j++)
 			{
-				System.out.println(a[i][j]);
+				if(i+j == k)
+					System.out.print(a[i][j]);
+				i++;
 			}
+			k++;
+			System.out.println("\n");
 		}
 
 	}
@@ -28,6 +33,6 @@ class antiDiag
 				a[i][j] = sc.nextInt();
 			}
 		}
-		compute();
+		compute(a, n);
 	}
 }	
